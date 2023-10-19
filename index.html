@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Top Section -->
+
+        <div class="row top-section align-items-center">
+            <div class="col-md-8">
+                <div id="userDataDisplay">
+                    <h1 class="display-4"><span id="displayName"></span></h1>
+                    <p class="lead"><span id="displayJob"></span></p>
+                    <p>Email: <span id="displayEmail"></span></p>
+                    <p>Phone: <span id="displayPhone"></span></p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/user-5.jpg" class="profile-picture" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 mt-4">
+                <!-- Work Experience Section -->
+                <div class="section">
+                    <h2>Work Experience</h2>
+                    <!-- Work Experience Entry 1 -->
+                    <div id="workData">
+                    </div>
+                    <!-- Add more work experience entries if needed -->
+                </div>
+
+                <!-- Projects Section -->
+                <div class="section">
+                    <h2>Projects</h2>
+                    <!-- Project Entry 1 -->
+                    <div id="projectData">
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="section">
+                    <h2>Education</h2>
+                    <!-- Education Table in Card -->
+                    <div id="educationData">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-4">
+                <!-- Skills Section -->
+                <div class="section">
+                    <h2>Skills</h2>
+                    <div id="skillsData">
+                        <div class="skills-tags">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications/Awards Section -->
+                <div class="section">
+                    <h2>Certifications/Awards</h2>
+                    <!-- Certification/Award Entry 1 -->
+                    <div id="certificatesData">
+                    </div>
+                </div>
+
+                <!-- Additional Information Section -->
+                <div class="section">
+                    <h2>Additional Information</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>
+                                <li><strong>Father Name:</strong> <span id="fname"></span></li>
+                                <li><strong>Date of Birth:</strong> <span id="dob"></span></li>
+                                <li><strong>Gender:</strong> <span id="gender"></span></li>
+                                <li><strong>Religion:</strong> <span id="religion"></span></li>
+                                <li><strong>Marital Status:</strong> <span id="marital"></span></li>
+                                <li><strong>Languages Known:</strong> <span id="languages_known"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <!-- Closing Statement Section -->
+                <div class="section">
+                    <p>
+                        <span id="Description"></span><br /><br />
+                        <strong id="signature"></strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-2 mb-5 text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn-lg" id="printbutton">PRINT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="display.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Link to Bootstrap JavaScript (optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .top-heading h2 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .card {
+            border: none;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-header h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #ccc;
+            border: none;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 top-heading">
+                <h2>Resume Builder</h2>
+            </div>
+        </div>
+
+        <!--PERSONAL DETAILS-->
+        <div class="card mx-auto">
+            <div id="personalDetailSection">
+                <div class="card-header">
+                    <h2>Personal Details</h2>
+                </div>
+                <div class="card-body">
+                    <form id="personalDetailsForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title:</label>
+                            <input type="text" class="form-control" id="jobTitle" name="jobTitle" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="profilePicture">Profile Picture:</label>
+                            <input type="file" class="form-control-file" id="profilePicture" name="profilePicture" />
+                        </div>
+                        <hr />
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">
+                                Save and Continue
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--WORK EXPERIENCE-->
+        <div class="card mx-auto">
+            <div id="workExperienceSection">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2>Work Experience</h2>
+                    <button type="button" class="btn btn-info btn-sm addmore" id="addworkExperience">Add More</button>
+                </div>
+                <div class="card-body">
+                    <div class="workExp">
+                        <form id="workExpForm" class="workExpForm">
+                            <div class="form-group">
+                                <label for="jobTitle1">Job Title</label>
+                                <input type="text" class="form-control" id="jobTitle1" name="jobTitle" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="companyName1">Company Name</label>
+                                <input type="text" class="form-control" id="companyName1" name="companyName" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="location1">Location</label>
+                                <input type="text" class="form-control" id="location1" name="location" />
+                            </div>
+                            <div class="form-group">
+                                <label for="employmentDates1">Dates of Employment</label>
+                                <input type="text" class="form-control" id="employmentDates1" name="employmentDates"
+                                    placeholder="Month Year - Month Year" />
+                            </div>
+                            <div class="form-group">
+                                <label for="description1">Description</label>
+                                <textarea class="form-control" id="description1" name="description" rows="4"></textarea>
+                            </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button ty1pe="button" class="btn btn-secondary mr-2" id="backpersonal">
+                            Back
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Save and Continue
+                        </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--PROJECT EXPERIENCE-->
+        <div class="card mx-auto">
+            <div id="proExperienceSection">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2>Project Experience</h2>
+                    <button type="button" class="btn btn-info btn-sm addPro" id="addProject">Add More</button>
+                </div>
+                <div class="card-body">
+                    <div class="projectExp">
+                        <form id="projectExpForm" class="projectExpForm">
+                            <div class="form-group">
+                                <label for="projectTitle1">Project Title</label>
+                                <input type="text" class="form-control" id="projectTitle1" name="projectTitle"
+                                    required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="teamName1">Company/Team Name</label>
+                                <input type="text" class="form-control" id="teamName1" name="teamName" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectDuration1">Project Duration</label>
+                                <input type="text" class="form-control" id="projectDuration1" name="projectDuration"
+                                    required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectDescription1">Description</label>
+                                <textarea class="form-control" id="projectDescription1" name="projectDescription"
+                                    rows="3" required></textarea>
+                            </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">
+                            Save and Continue
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="backpersonal1">Back</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--EDUCATION-->
+        <div class="card mx-auto">
+            <div id="EducationSection">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2>Education</h2>
+                    <button type="button" class="btn btn-info btn-sm addEducation" id="addEducation">
+                        Add More
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="education-entry">
+                        <form id="educationForm" class="educationForm">
+                            <div class="form-group">
+                                <label for="degreeTitle1">Degree Title</label>
+                                <input type="text" class="form-control" id="degreeTitle1" name="degreeTitle" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="universityName1">University Name</label>
+                                <input type="text" class="form-control" id="universityName1" name="universityName"
+                                    required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="graduationYear1">Graduation Year</label>
+                                <input type="text" class="form-control" id="graduationYear1" name="graduationYear"
+                                    required />
+                            </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-secondary mr-2" id="backpersonal2">
+                            Back
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Save and Continue
+                        </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--SKILLS-->
+        <div class="card mx-auto">
+            <div id="skillSection">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2>Skills</h2>
+                    <button type="button" class="btn btn-info btn-sm addSkill" id="addSkill">
+                        Add More
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="skill-entry mb-3">
+                        <form id="skillForm" class="skillForm">
+                            <div class="form-row">
+
+                                <div class="form-group col-md-6">
+                                    <label for="skillName1">Skill Name</label>
+                                    <input type="text" class="form-control" id="skillName1" name="skillName" required />
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="experience1">Years of Experience</label>
+                                    <input type="text" class="form-control" id="experience1" name="experience"
+                                        required />
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-secondary mr-2" id="backpersonal3">
+                            Back
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Save and Continue
+                        </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--CERTIFICATIONS-->
+        <div class="card mx-auto">
+            <div id="certificateSection">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2>Certification/Awards</h2>
+                    <button type="button" class="btn btn-info btn-sm addCertificate" id="addCertificate">Add
+                        More</button>
+                </div>
+                <div class="card-body">
+                    <div class="certificate-Entry">
+                        <form id="certificateForm" class="certificateForm">
+                            <div class="form-group">
+                                <label for="certTitle1">Title</label>
+                                <input type="text" class="form-control" id="certTitle1" name="certTitle" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="certYear1">Year Received</label>
+                                <input type="text" class="form-control" id="certYear1" name="certYear" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="certDesc1">Description</label>
+                                <textarea class="form-control" id="certDesc1" name="certDesc" rows="3"
+                                    required></textarea>
+                            </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">
+                            Save and Continue
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="backpersonal4">Back</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--ADDITIONAL INFORMATION-->
+        <div class="card mx-auto">
+            <div class="additionalSection">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2>Additional Info</h2>
+                </div>
+                <div class="card-body">
+                    <form id="additionalInfoForm" method="POST">
+                        <div class="form-group">
+                            <label for="certTitle">Father Name</label>
+                            <input type="text" class="form-control" id="fatherName" name="fatherName" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="certYear">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select class="form-control" id="gender" name="gender">
+                                <option value="">Please select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="marital">Marital Status</label>
+                            <select class="form-control" id="marital" name="marital_status">
+                                <option value="">Please select</option>
+                                <option value="married">Married</option>
+                                <option value="non-married">Non-married</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="religion">Religion</label>
+                            <input type="text" class="form-control" id="religion" name="religion" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="languages_known">Languages Known</label>
+                            <input type="text" class="form-control" id="languages_known" name="languages_known" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Description">Description</label>
+                            <textarea name="textarea" class="form-control" id="Description" cols="10" rows="5">
+                            </textarea>
+                            <label for="signature" class="mt-1">Signature</label>
+                            <input type="text" class="form-control" id="signature">
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary">
+                                Submit and Generate Resume
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="backpersonal5">Back</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JavaScript (optional) -->
+    <script src="script.js"></script>
+    <script src="display.js"></script>
+</body>
+
+</html>

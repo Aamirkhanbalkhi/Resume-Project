@@ -1,0 +1,91 @@
+/* Custom CSS for the top section */
+.top-section {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.top-section h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.top-section p {
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Custom CSS for other sections */
+.section {
+    background-color: #e7e4e4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card {
+    background-color: #fff;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.section p {
+    margin-bottom: 1px;
+    font-size: 14px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-tags .badge {
+    margin: 0 5px 5px 0;
+    padding: 5px 10px;
+    background-color: #007bff;
+    /* Customize badge background color */
+    color: #fff;
+    /* Customize text color */
+    font-size: 14px;
+    /* Customize font size */
+}
+
+.card-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-body ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.card-body ul li strong {
+    font-weight: bold;
+}
